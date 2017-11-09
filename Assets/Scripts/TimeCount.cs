@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
 public class TimeCount : MonoBehaviour { 
 
 	float time; //時間を記録する変数
