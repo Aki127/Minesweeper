@@ -5,17 +5,15 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class MineCount : MonoBehaviour {
-
 	public Text text;
-	int mines;
+	public int  mines =0;
 
 	// Use this for initialization
-	void Start () {
-		mines = 10; //多分この処理よくない。ボタンコントローラーに混ぜるとよくない気がするしボタンほとの地雷数の指定ができないるもしくは混乱する
-		text = GetComponent<Text> (); 
-		
-	}
+	void Start ()
+	{
 	
+
+	}
 	// Update is called once per frame
 	void Update () {
 		if (SceneManager.GetActiveScene ().name == "Game") {
