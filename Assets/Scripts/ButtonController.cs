@@ -3,29 +3,38 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+namespace Mine
+{
+   
+
 public class ButtonController : MonoBehaviour {
-	//ボタンを押した時にpublic変数に値を追加できないからシーンをゲームモードの数だけ作る楽な道を選んだ。
 
 		public void GameStartEasy(){
-		SceneManager.LoadScene ("GameEasy");
+        GameDifficultTypeManager.Instance.SetGameDifficultType(CommonDefine.GameDifficultType.EASY);
+        //インスタンスを所得
+        SceneManager.LoadScene("Game");
 
 	}
 		public void GameStartNormal(){
-		SceneManager.LoadScene ("GameNormal");
+        GameDifficultTypeManager.Instance.SetGameDifficultType(CommonDefine.GameDifficultType.NORMAL);
+        SceneManager.LoadScene ("Game");
+
 
 	} 
 		public void GameStratDifficult (){
-		SceneManager.LoadScene ("GameDifficult");
+        GameDifficultTypeManager.Instance.SetGameDifficultType(CommonDefine.GameDifficultType.DIFFICULT);
+		SceneManager.LoadScene ("Game");
 	}
 		public void Result(){
 		SceneManager.LoadScene ("Result");
 	}
-		public void Home(){
-		SceneManager.LoadScene ("Start");
+        public void Home()
+        {
+            SceneManager.LoadScene("Start");
 
 
 
-	
-		
+
+        }
 	}
 }
