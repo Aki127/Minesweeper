@@ -6,14 +6,12 @@ using UnityEngine.SceneManagement;
 using Mine;
 
 public class MineCount : MonoBehaviour {
-    public CommonDefine commonDefine;
     public Text text;
 	public int  mines = 0;
 
 	// Use this for initialization
 	void Start (){
         string gameMode;
-        gameMode = commonDefine.GameDifficultType;
 
 	}
 	// Update is called once per frame
