@@ -2,18 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//全体的にこのスクリプトが何をしているのかわからない。
 public class SingletonMonoBehaviour<T> : MonoBehaviour where T :
- SingletonMonoBehaviour<T>
+ SingletonMonoBehaviour<T> //何これ
 {
-    protected static T instance;
+    protected static T instance; //Protected staticとは
 
-    public static T Instance
+    public static T Instance //Tとは public staticは他のスクリプトでも参照できるようになるらしい。Instanceとは
     {
         get
         {
-            if(instance == null)
+            if(instance == null) //これはわかる
             {
-                instance = (T) FindObjectOfType(typeof(T));
+                instance = (T) FindObjectOfType(typeof(T)); //全くわからん
                 if (instance == null)
                 {
                     GameObject obj = new GameObject();

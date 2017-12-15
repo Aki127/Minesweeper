@@ -11,6 +11,8 @@ public class ButtonController : MonoBehaviour {
 
 		public void GameStartEasy(){
         GameDifficultTypeManager.Instance.SetGameDifficultType(CommonDefine.GameDifficultType.EASY);
+            Debug.Log("EASYモードでゲームスタート");
+
         //インスタンスを所得
         SceneManager.LoadScene("Game");
 
@@ -18,12 +20,14 @@ public class ButtonController : MonoBehaviour {
 		public void GameStartNormal(){
         GameDifficultTypeManager.Instance.SetGameDifficultType(CommonDefine.GameDifficultType.NORMAL);
         SceneManager.LoadScene ("Game");
+            Debug.Log("NORMALモードでゲームスタート");
 
 
 	} 
 		public void GameStratDifficult (){
         GameDifficultTypeManager.Instance.SetGameDifficultType(CommonDefine.GameDifficultType.DIFFICULT);
 		SceneManager.LoadScene ("Game");
+            Debug.Log("HARDモードでゲームスタート");
 	}
 		public void Result(){
 		SceneManager.LoadScene ("Result");
