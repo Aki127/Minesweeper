@@ -10,12 +10,10 @@ namespace Mine
 public class ButtonController : MonoBehaviour {
 
 		public void GameStartEasy(){
-        GameDifficultTypeManager.Instance.SetGameDifficultType(CommonDefine.GameDifficultType.EASY);
-            Debug.Log("EASYモードでゲームスタート");
-
+            GameDifficultTypeManager.Instance.SetGameDifficultType(CommonDefine.GameDifficultType.EASY);
         //インスタンスを所得
         SceneManager.LoadScene("Game");
-
+            Debug.Log("EASYモードでゲームスタート");
 	}
 		public void GameStartNormal(){
         GameDifficultTypeManager.Instance.SetGameDifficultType(CommonDefine.GameDifficultType.NORMAL);
