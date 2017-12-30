@@ -18,7 +18,7 @@ public class SingletonMonoBehaviour<T> : MonoBehaviour where T :
                 if (instance == null)
                 {
                     GameObject obj = new GameObject();
-                    obj.AddComponent<T>();
+                    instance = obj.AddComponent<T>(); //(nullバグ対処追記)
                     obj.name = "_singleton" + typeof(T).ToString();
                     Debug.LogWarning(typeof(T) + " is noting");
                 }
@@ -39,6 +39,7 @@ public class SingletonMonoBehaviour<T> : MonoBehaviour where T :
         {
             instance = (T)FindObjectOfType(typeof(T));
             GameObject obj = new GameObject();
+
             obj.AddComponent<T>();
             obj.name = " _singleton" + typeof(T).ToString();
             if(instance == null)
