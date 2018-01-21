@@ -40,6 +40,13 @@ public class GameDifficultTypeManager : SingletonMonoBehaviour<GameDifficultType
             case CommonDefine.GameDifficultType.DIFFICULT:
 
                 return 99;
+            case CommonDefine.GameDifficultType.GAMEOVER:
+
+                return 999;
+
+            case CommonDefine.GameDifficultType.GAMECLEAR:
+
+                return 000;
             default:
                 return 0;
         }

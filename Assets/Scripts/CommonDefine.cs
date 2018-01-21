@@ -15,7 +15,9 @@ namespace Mine{
             NONE,
             EASY,
             NORMAL,
-            DIFFICULT
+            DIFFICULT,
+            GAMEOVER,
+            GAMECLEAR
         }
     }
 }

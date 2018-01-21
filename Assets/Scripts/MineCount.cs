@@ -32,7 +32,7 @@ namespace Mine
             mines = GameDifficultTypeManager.Instance.GetMineNum();
             string minesText = (mines).ToString();
             text.text = minesText;
-            Debug.Log("ローディング済" + mines);
+           //Debug.Log("ローディング済" + mines);
 
         }
     }
